@@ -1,16 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; // Import Route component
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import AddLanguageForm from './components/Screen/Addlanguage';
-import Addmovie from './components/Screen/Addmovie';
-import Editmovie from './components/Screen/Editmovie';
+import Home from './userside/Home';
+
 function App() {
   return (
     <div className="App">
-     <AddLanguageForm/>
-<Addmovie/>
-<Editmovie/>
+    
       
+      
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+         {/* <Route path="/" element={<Ticket/>}/>*/}
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

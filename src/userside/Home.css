@@ -1,0 +1,28 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.button{
+    align-content: center;
+}
+.hbutton{
+    background-color: hsl(210, 77%, 55%);
+    justify-content: left;
+    align-items: left;
+}
+
+.bannercontainer{
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    margin-top: 2rem;
+    
+}
+.card
+{
+    
+    display: flex;
+    flex-direction: row;
+}
