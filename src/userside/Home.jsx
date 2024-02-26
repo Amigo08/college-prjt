@@ -101,12 +101,12 @@ export default function DrawerAppBar(props) {
 
       </Box>
       <div className="card">
-        <Box>
+        {/* <Box> */}
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
                 component="img"
-                height="400"
+                height="100"
                 image="/static/images/cards/contemplative-reptile.jpg"
                 alt="green iguana"
               />
@@ -118,7 +118,39 @@ export default function DrawerAppBar(props) {
               </CardContent>
             </CardActionArea>
           </Card>
-        </Box>
+          <Card sx={{ maxWidth: 345 }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="100"
+                image="/static/images/cards/contemplative-reptile.jpg"
+                alt="green iguana"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  Brahmayugam
+                </Typography>
+
+              </CardContent>
+            </CardActionArea>
+          </Card>
+          <Card sx={{ maxWidth: 345 }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="100"
+                image="/static/images/cards/contemplative-reptile.jpg"
+                alt="green iguana"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  Premalu-Malayalam
+                </Typography>
+
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        {/* </Box> */}
       </div>
     </>
 

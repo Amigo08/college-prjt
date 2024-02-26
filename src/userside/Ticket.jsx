@@ -1,95 +1,97 @@
-// import React from 'react';
-// import AppBar from '@mui/material/AppBar';
-// import Box from '@mui/material/Box';
-// import Toolbar from '@mui/material/Toolbar';
-// import Typography from '@mui/material/Typography';
-// import IconButton from '@mui/material/IconButton';
-// import MenuIcon from '@mui/icons-material/Menu';
+import { AppBar, Box, Button, SelectChangeEvent, FormControl, MenuItem, Select, Toolbar, Typography, InputLabel } from '@mui/material';
+import { useState } from 'react';
 
-// import Switch from '@mui/material/Switch';
-// import FormControlLabel from '@mui/material/FormControlLabel';
-// import FormGroup from '@mui/material/FormGroup';
-// import MenuItem from '@mui/material/MenuItem';
-// import Menu from '@mui/material/Menu';
 
-// export default function MenuAppBar() {
-//   const [auth, setAuth] = React.useState(true);
-//   const [anchorEl, setAnchorEl] = React.useState(null);
+export default function ButtonAppBar() {
+  const [lang, setLang] = useState('');
+  const [form, setForm] = useState("")
 
-//   const handleChange = (event) => {
-//     setAuth(event.target.checked);
-//   };
 
-//   const handleMenu = (event) => {
-//     setAnchorEl(event.currentTarget);
-//   };
+  const handleChange = (event) => {
+    setLang(event.target.value);
+  };
 
-//   const handleClose = () => {
-//     setAnchorEl(null);
-//   };
 
-//   return (
-//     <Box sx={{ flexGrow: 1 }}>
-//       <FormGroup>
-//         <FormControlLabel
-//           control={
-//             <Switch
-//               checked={auth}
-//               onChange={handleChange}
-//               aria-label="login switch"
-//             />
-//           }
-//           label={auth ? 'Logout' : 'Login'}
-//         />
-//       </FormGroup>
-//       <AppBar position="static">
-//         <Toolbar>
-//           <IconButton
-//             size="large"
-//             edge="start"
-//             color="inherit"
-//             aria-label="menu"
-//             sx={{ mr: 2 }}
-//           >
-//             <MenuIcon />
-//           </IconButton>
-//           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-//             Photos
-//           </Typography>
-//           {auth && (
-//             <div>
-//               <IconButton
-//                 size="large"
-//                 aria-label="account of current user"
-//                 aria-controls="menu-appbar"
-//                 aria-haspopup="true"
-//                 onClick={handleMenu}
-//                 color="inherit"
-//               >
-                
-//               </IconButton>
-//               <Menu
-//                 id="menu-appbar"
-//                 anchorEl={anchorEl}
-//                 anchorOrigin={{
-//                   vertical: 'top',
-//                   horizontal: 'right',
-//                 }}
-//                 keepMounted
-//                 transformOrigin={{
-//                   vertical: 'top',
-//                   horizontal: 'right',
-//                 }}
-//                 open={Boolean(anchorEl)}
-//                 onClose={handleClose}
-//               >
-//                 <MenuItem onClick={handleClose}>Profile</MenuItem>
-//                 <MenuItem onClick={handleClose}>My account</MenuItem>
-//               </Menu>
-//             </div>
-//           )}
-//         </Toolbar>
-//       </AppBar>
-//     </Box>
-//   );
-// }
+  return (
+
+
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar sx={{ justifyContent: 'space-between' }}>
+          <Typography variant="h6" component="div">
+            Home
+          </Typography>
+          <Button color="inherit">Login/SignUp</Button>
+        </Toolbar>
+      </AppBar>
+      <div style={{ textAlign: 'left', padding: '10px' }}>
+        <h1>Amigo Cinemazz</h1>
+      </div>
+      <div>
+
+
+
+        <div style={{ display: "flex", gap: "10px",width:"400px" }}>
+
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">Age</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={lang}
+              label="Age"
+              onChange={handleChange}
+            >
+              <MenuItem value={10}>English</MenuItem>
+              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={30}>Thirty</MenuItem>
+            </Select>
+          </FormControl>
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">Age</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={form}
+              label="Age"
+              onChange={handleChange}
+            >
+              <MenuItem value={10}>Ten</MenuItem>
+              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={30}>Thirty</MenuItem>
+            </Select>
+          </FormControl>
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">Age</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={form}
+              label="Age"
+              onChange={handleChange}
+            >
+              <MenuItem value={10}>Ten</MenuItem>
+              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={30}>Thirty</MenuItem>
+            </Select>
+          </FormControl>
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">Age</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={form}
+              label="Age"
+              onChange={handleChange}
+            >
+              <MenuItem value={10}>Ten</MenuItem>
+              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={30}>Thirty</MenuItem>
+            </Select>
+          </FormControl>
+        </div>
+
+      </div>
+    </Box>
+  );
+}
